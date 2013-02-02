@@ -1,0 +1,10 @@
+<% @listings.each do |l| %>
+  <article class="span3">
+    <h2>
+      <a href="<%= l["data"]["url"] %>">
+        <%= l["data"]["title"] %>
+      </a>
+    </h2>
+    <small>/r/<%= l["data"]["subreddit"] %></small>
+  </article>
+<% end %>
