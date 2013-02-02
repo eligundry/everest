@@ -1,0 +1,10 @@
+<article class="span3">
+  <h2>
+    <a href="<%= listing["data"]["url"] %>">
+      <%= listing["data"]["title"] %>
+    </a>
+  </h2>
+  <small class="date"><%= post_date(listing["data"]["created_utc"]) %></small>
+  <small class="time"><%= post_time(listing["data"]["created_utc"]) %></small>
+  <span class="badge">/r/<%= listing["data"]["subreddit"] %></span>
+</article>
