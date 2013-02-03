@@ -1,0 +1,15 @@
+<article>
+  <header>
+    <h1><%= p["title"] %></h1>
+    <time>
+      <small class="date"><%= post_date(p["created_utc"]) %></small>
+      <small class="time"><%= post_time(p["created_utc"]) %></small>
+    </time>
+  </header>
+
+  <section role="main">
+    <%= p["selftext_html"] %>
+  </section>
+
+  <footer role="contentinfo"></footer>
+</article>
