@@ -6,9 +6,9 @@ class PostController < ApplicationController
       :depth => 1
     }
 
-    res = snoo.get_comments(comment_options)
+    res = Reddit.new().snoo.get_comments(comment_options)
 
-    @comments = res[1]["data"]
+    @comments = res[1]["data"]["children"]
     @post = res[0]["data"]["children"][0]["data"]
   end
 end

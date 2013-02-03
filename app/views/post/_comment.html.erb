@@ -1,1 +1,26 @@
-<% c = comment %>
+<% item = item["data"] %>
+
+<article class="post-comment">
+  <header>
+    <a href="#">
+      <%= item["author"] %>
+    </a>
+  </header>
+
+  <aside>
+    <a href="#">
+      <i class="icon-arrow-up"></i>
+    </a>
+    <a href="#">
+      <i class="icon-arrow-down"></i>
+    </a>
+  </aside>
+
+  <section>
+    <%= to_markdown(item["body"]) %>
+  </section>
+
+  <footer>
+    <a href="#" class="comment-reply">Reply</a>
+  </footer>
+</article>

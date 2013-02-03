@@ -26,3 +26,6 @@ gem 'jquery-rails'
 
 # Reddit API access
 gem 'snoo'
+
+# Redcarpet for Markdwon
+gem 'redcarpet'
