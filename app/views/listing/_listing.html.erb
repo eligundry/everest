@@ -1,10 +1,15 @@
 <% item = item["data"] %>
-<article class="span3">
+<article class="span3 article">
   <h2>
-    <a href="<%= post_link(item["subreddit"], item["id"]) %>">
+    <a href="<%= post_link(item["subreddit"], item["id"]) %>" class="article-heading">
       <%= item["title"] %>
     </a>
   </h2>
+  <aside class="utility">
+    <a href="#" class="upvote"></a>
+    <a href="#" class="downvote"></a>
+    <a href="#" class="comment"></a>
+  </aside>
   <small class="date"><%= post_date(item["created_utc"]) %></small>
   <small class="time"><%= post_time(item["created_utc"]) %></small>
   <%= subreddit_badge(item["subreddit"]) %>
