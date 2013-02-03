@@ -1,3 +1,61 @@
 // Place all the styles related to the Listing controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: "Titillium Web";
+
+}
+
+/* Mixins */
+@mixin heading {
+  background-color: rbga(0,0,0, 0.75);
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@mixin utilites {
+  
+}
+
+.article {
+  .article-heading {
+    @include heading;
+  }
+  .article-body {
+
+  }
+}
+
+.image {
+  .image-heading {
+    @include heading;
+  }
+  
+}
+
+.gallery {
+  .gallery-heading {
+    @include heading;
+  }
+  .gallery-full {
+
+  }
+  .gallery-half {
+
+  }
+}
+
+.video {
+  .video-heading {
+    @include heading;
+  }
+  
+}
+
+.self {
+  .self-heading{
+    @include heading;
+  }
+  
+}
