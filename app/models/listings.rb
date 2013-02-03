@@ -1,0 +1,2 @@
+class Listings < Reddit
+end

@@ -1,15 +1,16 @@
 class ListingController < ApplicationController
-  require 'snoo'
-
   def index
-    reddit = Snoo::Client.new
-    options = { :page => 'top' }
-    @listings = reddit.get_listing(options)["data"]["children"]
+    options = { :page => 'hot' }
+
+    @l = Reddit.new().snoo.get_listing(options)["data"]["children"]
   end
 
   def r
-    reddit = Snoo::Client.new
-    options = { :subreddit => params[:subreddit], :page => 'top' }
-    @listings = reddit.get_listing(options)["data"]["children"]
+    options = {
+      :subreddit => params[:subreddit],
+      :page => 'hot'
+    }
+
+    @l = Reddit.new().snoo.get_listing(options)["data"]["children"]
   end
 end
