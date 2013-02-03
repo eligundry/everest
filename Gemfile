@@ -29,3 +29,6 @@ gem 'snoo'
 
 # Redcarpet for Markdwon
 gem 'redcarpet'
+
+# Embed.ly
+gem 'embedly'

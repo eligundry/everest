@@ -21,4 +21,15 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
     markdown.render(text).html_safe
   end
+
+  def embedly_preview(url)
+    require 'embedly'
+    options = {
+      :user_agent => "/r/everest v0.1 u/eligundry",
+      :key => '01a99403789e407398af90c176f57630'
+    }
+
+    api = Embedly::API.new(options)
+    api.oembed({ :url => url })[0].marshal_dump
+  end
 end

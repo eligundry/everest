@@ -1,11 +1,15 @@
 <% item = item["data"] %>
+<% preview = embedly_preview(item["url"]) %>
 <article class="span3">
   <h2>
     <a href="<%= post_link(item["subreddit"], item["id"]) %>">
       <%= item["title"] %>
     </a>
   </h2>
-  <small class="date"><%= post_date(item["created_utc"]) %></small>
-  <small class="time"><%= post_time(item["created_utc"]) %></small>
-  <%= subreddit_badge(item["subreddit"]) %>
+  <img src="<%= preview[:thumbnail_url] %>" alt="<%= preview[:descriptions] %>" />
+  <footer role="contentinfo">
+    <small class="date"><%= post_date(item["created_utc"]) %></small>
+    <small class="time"><%= post_time(item["created_utc"]) %></small>
+    <%= subreddit_badge(item["subreddit"]) %>
+  </footer>
 </article>
